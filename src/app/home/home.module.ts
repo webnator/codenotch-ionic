@@ -6,6 +6,8 @@ import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
 import { CiudadComponent } from '../ciudad/ciudad.component';
+import { MareaPipe } from '../marea.pipe';
+import { PeriodoPipe } from '../periodo.pipe';
 
 @NgModule({
   imports: [
@@ -19,6 +21,6 @@ import { CiudadComponent } from '../ciudad/ciudad.component';
       }
     ])
   ],
-  declarations: [HomePage, CiudadComponent]
+  declarations: [HomePage, CiudadComponent, MareaPipe, PeriodoPipe]
 })
 export class HomePageModule {}
