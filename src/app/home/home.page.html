@@ -8,7 +8,5 @@
 
 <ion-content padding>
   Lista de ciudades
-  <div *ngFor="let ciudad of ciudades">
-    {{ ciudad.nombre }}
-  </div>
+  <app-ciudad *ngFor="let ciudad of ciudades" [ciudad]="ciudad"></app-ciudad>
 </ion-content>
