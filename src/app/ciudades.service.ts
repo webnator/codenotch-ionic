@@ -12,21 +12,13 @@ export class CiudadesService {
       nombre: 'Malaga',
       pais: 'España',
       periodo: 10,
-      marea: 2,
-      temperatura: {
-        valor: 20,
-        tipo: 'ºC'
-      }
+      marea: 2
     },{
       codigo: 'SOM',
       nombre: 'Somo',
       pais: 'España',
       periodo: 8,
-      marea: 5,
-      temperatura: {
-        valor: 18,
-        tipo: 'ºC'
-      }
+      marea: 5
     }];
   }
 

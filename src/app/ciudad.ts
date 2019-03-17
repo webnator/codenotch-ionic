@@ -2,7 +2,7 @@ export class Ciudad {
   nombre: string
   codigo: string
   pais: string
-  temperatura: Temperatura
+  temperatura?: Temperatura
   marea: number
   periodo: number
 }

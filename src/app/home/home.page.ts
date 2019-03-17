@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { Ciudad } from '../ciudad';
+import { Ciudad, Temperatura } from '../ciudad';
 import { CiudadesService } from '../ciudades.service';
+import { TemperaturaService } from '../temperatura.service';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +11,16 @@ import { CiudadesService } from '../ciudades.service';
 export class HomePage {
   public ciudades: Array<Ciudad>
 
-  constructor(private ciudadesService: CiudadesService) {
+  constructor(
+    private ciudadesService: CiudadesService,
+    private temperaturaService: TemperaturaService
+  ) {
     this.ciudades = this.ciudadesService.obtenerCiudades();
+    for (const ciudad of this.ciudades) {
+      this.temperaturaService.obtenerTemperaturaCiudad(ciudad.nombre)
+        .subscribe((temp: Temperatura) => {
+          ciudad.temperatura = temp;
+        });
+    }
   }
 }
